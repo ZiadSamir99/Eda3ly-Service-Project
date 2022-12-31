@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "152e9d97-c71c-403e-940e-339663c60ed6",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25070734"
+	},
+	"item": [
+		{
+			"name": "Register new User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"name\":\"ziad\"\r\n    ,\"id\":20200204\r\n    ,\"creditCard\":\"0000\"\r\n    ,\"password\":\"1234\"\r\n    ,\"email\":\"ziad1234@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"1234\",\r\n    \"email\":\"ziad1234@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve user data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/showUserData/20200204",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"showUserData",
+						"20200204"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add money to wallet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditCard\":\"0000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/addMoneyToWallet/3000/20200204",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"addMoneyToWallet",
+						"3000",
+						"20200204"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mobile Services payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/services/mobile/Internet/20200204/0101010/vodafone/wallet/200.0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"services",
+						"mobile",
+						"Internet",
+						"20200204",
+						"0101010",
+						"vodafone",
+						"wallet",
+						"200.0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Donation services payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/donations/schools/schoola/1000/20200204/creditcard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"donations",
+						"schools",
+						"schoola",
+						"1000",
+						"20200204",
+						"creditcard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Receipt Service payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/Receipts/landline/0233100294/monthly/230/20200204/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"Receipts",
+						"landline",
+						"0233100294",
+						"monthly",
+						"230",
+						"20200204",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make refund request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":20200204\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/requestRefund/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"requestRefund",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Transactions request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/requestList/20200204",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"requestList",
+						"20200204"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserupdates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/ShowUpdates/20200204",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"ShowUpdates",
+						"20200204"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

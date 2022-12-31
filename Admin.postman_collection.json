@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "e00c0d28-993a-443f-b232-bad0a964da2b",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25070734"
+	},
+	"item": [
+		{
+			"name": "List refund requests",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/listRequests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"listRequests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " \"accept\"\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/acceptRequest/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"acceptRequest",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove offer from all",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/RemoveOffersfromAllServices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"RemoveOffersfromAllServices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Offer for specific provider",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "20",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/addoffers/etisalat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"addoffers",
+						"etisalat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Offer for all providers",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "20",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/admin/addoffersToallServices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"addoffersToallServices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show User Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/admin/ShowUserTransactions/20200204",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"admin",
+						"ShowUserTransactions",
+						"20200204"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
